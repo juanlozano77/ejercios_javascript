@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <meta name="generator" content="DA-Formmaker 4.11.13">
+    <!--TEMPLATE:4.2-->
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.2/jquery-ui.min.js"></script>
+    <script src="index.js"></script>
+    <script>
+        $(function () {
+            
+            
+          });
+    </script>
+    
+    
+    <script type="text/javascript">
+      function addHiddenField(formID, name, value)
+{
+	var input = document.createElement("input");
+	input.setAttribute("type", "hidden");
+	input.setAttribute(name, "name_you_want");
+	input.setAttribute(value, "value_you_want");
+	document.getElementById(formID).appendChild(input);
+}
+
+function GetCookie(cookie_name)
+{
+  if (document.cookie.length>0)
+    {
+    cookie_start=document.cookie.indexOf(cookie_name + "=");
+    if (cookie_start!=-1)
+      { 
+      cookie_start=cookie_start + cookie_name.length+1; 
+      cookie_end=document.cookie.indexOf(";",cookie_start);
+      if (cookie_end==-1) cookie_end=document.cookie.length;
+      return unescape(document.cookie.substring(cookie_start,cookie_end));
+      } 
+    }
+  return "";
+}
+
+function str_replace(search, replace, subject) {
+	return subject.split(search).join(replace);
+}
+    </script>
+
+
+    <!-- DAFORMJSBEGIN -->
+    <!-- JSCAPTCHAREFRESH -->
+
+    <script type="text/javascript">
+
+    function SetCookieValues() {
+      
+}
+
+    function SetCookies() {
+        
+}
+
+    </script>
+
+    <script type="text/javascript">
+function chkFormular()
+{
+
+
+
+document.getElementById('Dibuja_la_forma_de_la_llave_y_cerradura_de_tu_casa').value = signaturePad6.toDataURL();
+
+	return true;
+}
+</script>
+
+    
+</head>
+<body onLoad="SetCookieValues();">
+  
+<div class="w3-card-12 w3-white mainContainer">
+  <!-- FORMTITLE_BEGIN -->
+  <div class="w3-container w3-sand">
+      <h1>Formulario de Registro</h1>
+  </div>
+<!-- FORMTITLE_END -->
+
+
+<!-- <form class="w3-container" action="https://www.ekiwi-scripts.de/form/v4/formmail_v4.php" method="POST" name="DAFORM" onSubmit="SetCookies();return chkFormular();" enctype="multipart/form-data" target="_self"> -->
+
+<form class="w3-container" method="POST" name="DAFORM" onSubmit="enviarForm()" enctype="multipart/form-data" target="_self">
+  
+<div class="w3-container">
+	<p>
+	<label>Nombre</label>
+	<input class="w3-input w3-white" type="text" name="Nombre" id="Nombre" value="" maxLength="30" required>
+		</p>
+</div>
+
+<div class="w3-container">
+	<p>
+	<label>Apellido</label>
+	<input class="w3-input w3-white" type="text" name="Apellido" id="Apellido" value="" maxLength="100" required>
+		</p>
+</div>
+
+<div class="w3-container">
+	<p>
+	<label>Direccion de Tu Casa</label>
+	<input class="w3-input w3-white" type="text" name="Direccion" id="Direccion" value="" maxLength="100" required>
+		</p>
+</div>
+
+<div class="w3-container">
+	<p>
+	<input class="w3-check" type="checkbox" value="x" name="Tengo_un_sistema_de_seguridad" id="Seguridad">&nbsp;<label>Tengo un sistema de seguridad</label>
+		</p>
+</div>
+
+<div class="w3-container">
+	<p>
+	<label>Numero Tarjeta de Credito</label>
+	<input class="w3-input w3-white" type="text" name="Tarjeta" id="Tarjeta" value="" maxLength="100">
+		</p>
+</div>
+
+<div class="w3-container">
+	<p>
+	<label>Horarios en que no hay nadie en tu casa</label>
+	<div>	<textarea class="w3-input w3-white" type="text" style="resize:none" name="Horarios_en_que_no_hay_nadie_en_tu_casa" id="Horarios" value="" rows="5"></textarea>	</div>		</p>
+</div>
+
+<div class="w3-container">
+	<p>
+	<label>Dibuja la forma de la llave y cerradura de tu casa</label>
+	<br>
+	  <div id="signature-pad6" class="m-signature-pad6">
+	    <div class="m-signature-pad--body6">
+	      <canvas></canvas>
+	      <button type="button" class="w3-btn w3-red" data-action="clear">Borrar</button>
+	       <input type="hidden" name="Dibuja_la_forma_de_la_llave_y_cerradura_de_tu_casa" id="Dibujo" value="">
+	    </div>
+	  </div>
+	</p>
+</div>
+
+
+<!-- CAPTCHA -->
+
+
+<div class="w3-container">
+  <p>
+    <button type="submit"  class="w3-btn w3-blue-grey">Enviar</button>      
+    <button type="reset"  onclick="resetForm();" class="w3-btn w3-red">Borrar Formulario</button>
+    <!-- PRINTBUTTON -->    
+  </p>
+</div>
+</form>
+
+</div>
+
+
+
+
+
+<script src="signature.js"></script>
+<script src="signature_pad.js"></script>
+
+</body>
+</html>
